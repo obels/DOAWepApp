@@ -1,0 +1,24 @@
+﻿@model  List<DOAWepApp.Models.Database.EmployeeDbModels>
+@{
+    ViewBag.Title = "Directory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Directory Page</h2>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+    
+        console.log("Hello")
+
+    });
+</script>        
+}
+
+@foreach (var item in Model)
+            {
+                <ul>
+                    <li>@item.Name</li>
+                </ul>
+            }
